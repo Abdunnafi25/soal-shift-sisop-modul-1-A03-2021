@@ -19,4 +19,4 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-0 20 1-31/7,2-31/4 * * /home/zenryuu/Documents/SoalShift1/no3/3b.sh
+0 20 1-31/7,2-31/4 * * /home/zenryuu/Documents/SoalShift1/no3/soal3b.sh
