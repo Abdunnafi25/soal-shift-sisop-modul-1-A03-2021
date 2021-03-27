@@ -1,0 +1,3 @@
+* 7 * * 1-5 /home/zenryuu/Documents/SoalShift1/no3/3d.sh
+0 18 * * 1-5 unzip -P 'date +"%d%m%Y"' /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip && rm /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip
+

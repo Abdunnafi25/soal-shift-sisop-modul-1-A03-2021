@@ -1,0 +1,345 @@
+--2021-03-27 14:39:04--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50539661798_789850e6bd_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:05--  https://loremflickr.com/cache/resized/65535_50539661798_789850e6bd_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 11889 (12K) [image/jpeg]
+Saving to: ‘Koleksi_01.jpg’
+
+     0K .......... .                                          100% 1,47M=0,008s
+
+2021-03-27 14:39:06 (1,47 MB/s) - ‘Koleksi_01.jpg’ saved [11889/11889]
+
+--2021-03-27 14:39:06--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50989735951_04f1a66a59_n_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:07--  https://loremflickr.com/cache/resized/65535_50989735951_04f1a66a59_n_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13241 (13K) [image/jpeg]
+Saving to: ‘Koleksi_02.jpg’
+
+     0K .......... ..                                         100% 1,29M=0,01s
+
+2021-03-27 14:39:07 (1,29 MB/s) - ‘Koleksi_02.jpg’ saved [13241/13241]
+
+--2021-03-27 14:39:07--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:08--  https://loremflickr.com/cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12215 (12K) [image/jpeg]
+Saving to: ‘Koleksi_03.jpg’
+
+     0K .......... .                                          100% 1,41M=0,008s
+
+2021-03-27 14:39:08 (1,41 MB/s) - ‘Koleksi_03.jpg’ saved [12215/12215]
+
+--2021-03-27 14:39:08--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:09--  https://loremflickr.com/cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12215 (12K) [image/jpeg]
+Saving to: ‘Koleksi_04.jpg’
+
+     0K .......... .                                          100% 1,47M=0,008s
+
+2021-03-27 14:39:09 (1,47 MB/s) - ‘Koleksi_04.jpg’ saved [12215/12215]
+
+--2021-03-27 14:39:09--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50690495156_d3fec1d967_n_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:10--  https://loremflickr.com/cache/resized/65535_50690495156_d3fec1d967_n_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 6956 (6,8K) [image/jpeg]
+Saving to: ‘Koleksi_05.jpg’
+
+     0K ......                                                100% 18,9M=0s
+
+2021-03-27 14:39:10 (18,9 MB/s) - ‘Koleksi_05.jpg’ saved [6956/6956]
+
+--2021-03-27 14:39:10--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50620937283_d915e255cf_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:11--  https://loremflickr.com/cache/resized/65535_50620937283_d915e255cf_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15951 (16K) [image/jpeg]
+Saving to: ‘Koleksi_06.jpg’
+
+     0K .......... .....                                      100% 1,05M=0,01s
+
+2021-03-27 14:39:12 (1,05 MB/s) - ‘Koleksi_06.jpg’ saved [15951/15951]
+
+--2021-03-27 14:39:12--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50219040817_2cef06fd67_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:12--  https://loremflickr.com/cache/resized/65535_50219040817_2cef06fd67_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9533 (9,3K) [image/jpeg]
+Saving to: ‘Koleksi_07.jpg’
+
+     0K .........                                             100% 2,66M=0,003s
+
+2021-03-27 14:39:13 (2,66 MB/s) - ‘Koleksi_07.jpg’ saved [9533/9533]
+
+--2021-03-27 14:39:13--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50917877588_9db3484f10_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:14--  https://loremflickr.com/cache/resized/65535_50917877588_9db3484f10_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9724 (9,5K) [image/jpeg]
+Saving to: ‘Koleksi_08.jpg’
+
+     0K .........                                             100% 3,02M=0,003s
+
+2021-03-27 14:39:14 (3,02 MB/s) - ‘Koleksi_08.jpg’ saved [9724/9724]
+
+--2021-03-27 14:39:14--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50547864492_1b0ed76a96_n_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:15--  https://loremflickr.com/cache/resized/65535_50547864492_1b0ed76a96_n_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16636 (16K) [image/jpeg]
+Saving to: ‘Koleksi_09.jpg’
+
+     0K .......... ......                                     100% 7,40M=0,002s
+
+2021-03-27 14:39:16 (7,40 MB/s) - ‘Koleksi_09.jpg’ saved [16636/16636]
+
+--2021-03-27 14:39:16--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:17--  https://loremflickr.com/cache/resized/65535_50424112413_0ecffe4311_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 10773 (11K) [image/jpeg]
+Saving to: ‘Koleksi_10.jpg’
+
+     0K ..........                                            100% 1,92M=0,005s
+
+2021-03-27 14:39:17 (1,92 MB/s) - ‘Koleksi_10.jpg’ saved [10773/10773]
+
+--2021-03-27 14:39:17--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50488056162_04ebb8bd48_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:18--  https://loremflickr.com/cache/resized/65535_50488056162_04ebb8bd48_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 19030 (19K) [image/jpeg]
+Saving to: ‘Koleksi_11.jpg’
+
+     0K .......... ........                                   100% 18,9K=1,0s
+
+2021-03-27 14:39:20 (18,9 KB/s) - ‘Koleksi_11.jpg’ saved [19030/19030]
+
+--2021-03-27 14:39:20--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_51070124663_01afa21407_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:21--  https://loremflickr.com/cache/resized/65535_51070124663_01afa21407_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9703 (9,5K) [image/jpeg]
+Saving to: ‘Koleksi_12.jpg’
+
+     0K .........                                             100% 2,50M=0,004s
+
+2021-03-27 14:39:21 (2,50 MB/s) - ‘Koleksi_12.jpg’ saved [9703/9703]
+
+--2021-03-27 14:39:21--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50925575496_ded5b41162_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:22--  https://loremflickr.com/cache/resized/65535_50925575496_ded5b41162_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16627 (16K) [image/jpeg]
+Saving to: ‘Koleksi_13.jpg’
+
+     0K .......... ......                                     100% 1,09M=0,01s
+
+2021-03-27 14:39:22 (1,09 MB/s) - ‘Koleksi_13.jpg’ saved [16627/16627]
+
+--2021-03-27 14:39:22--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50739141646_a2e146d245_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:23--  https://loremflickr.com/cache/resized/65535_50739141646_a2e146d245_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18583 (18K) [image/jpeg]
+Saving to: ‘Koleksi_14.jpg’
+
+     0K .......... ........                                   100% 12,7M=0,001s
+
+2021-03-27 14:39:23 (12,7 MB/s) - ‘Koleksi_14.jpg’ saved [18583/18583]
+
+--2021-03-27 14:39:23--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50908968217_91495c2b08_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:25--  https://loremflickr.com/cache/resized/65535_50908968217_91495c2b08_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14013 (14K) [image/jpeg]
+Saving to: ‘Koleksi_15.jpg’
+
+     0K .......... ...                                        100% 25,2M=0,001s
+
+2021-03-27 14:39:25 (25,2 MB/s) - ‘Koleksi_15.jpg’ saved [14013/14013]
+
+--2021-03-27 14:39:25--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50620937283_d915e255cf_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:26--  https://loremflickr.com/cache/resized/65535_50620937283_d915e255cf_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15951 (16K) [image/jpeg]
+Saving to: ‘Koleksi_16.jpg’
+
+     0K .......... .....                                      100% 1,63M=0,009s
+
+2021-03-27 14:39:26 (1,63 MB/s) - ‘Koleksi_16.jpg’ saved [15951/15951]
+
+--2021-03-27 14:39:26--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:27--  https://loremflickr.com/cache/resized/65535_50161842181_cd1aff52a2_c_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12215 (12K) [image/jpeg]
+Saving to: ‘Koleksi_17.jpg’
+
+     0K .......... .                                          100% 1,39M=0,008s
+
+2021-03-27 14:39:27 (1,39 MB/s) - ‘Koleksi_17.jpg’ saved [12215/12215]
+
+--2021-03-27 14:39:27--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50559238333_4318e6692b_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:28--  https://loremflickr.com/cache/resized/65535_50559238333_4318e6692b_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12228 (12K) [image/jpeg]
+Saving to: ‘Koleksi_18.jpg’
+
+     0K .......... .                                          100%  777K=0,02s
+
+2021-03-27 14:39:29 (777 KB/s) - ‘Koleksi_18.jpg’ saved [12228/12228]
+
+--2021-03-27 14:39:29--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50499358281_3d337871bb_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:30--  https://loremflickr.com/cache/resized/65535_50499358281_3d337871bb_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8792 (8,6K) [image/jpeg]
+Saving to: ‘Koleksi_19.jpg’
+
+     0K ........                                              100%  821K=0,01s
+
+2021-03-27 14:39:30 (821 KB/s) - ‘Koleksi_19.jpg’ saved [8792/8792]
+
+--2021-03-27 14:39:30--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50676087037_6b5f44c2e8_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:31--  https://loremflickr.com/cache/resized/65535_50676087037_6b5f44c2e8_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8363 (8,2K) [image/jpeg]
+Saving to: ‘Koleksi_20.jpg’
+
+     0K ........                                              100% 2,20M=0,004s
+
+2021-03-27 14:39:31 (2,20 MB/s) - ‘Koleksi_20.jpg’ saved [8363/8363]
+
+--2021-03-27 14:39:31--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50310242268_3112d0fd3a_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:32--  https://loremflickr.com/cache/resized/65535_50310242268_3112d0fd3a_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14902 (15K) [image/jpeg]
+Saving to: ‘Koleksi_21.jpg’
+
+     0K .......... ....                                       100% 1,17M=0,01s
+
+2021-03-27 14:39:32 (1,17 MB/s) - ‘Koleksi_21.jpg’ saved [14902/14902]
+
+--2021-03-27 14:39:32--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/74_186628634_a9709cb8e3_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:33--  https://loremflickr.com/cache/resized/74_186628634_a9709cb8e3_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14319 (14K) [image/jpeg]
+Saving to: ‘Koleksi_22.jpg’
+
+     0K .......... ...                                        100%  898K=0,02s
+
+2021-03-27 14:39:34 (898 KB/s) - ‘Koleksi_22.jpg’ saved [14319/14319]
+
+--2021-03-27 14:39:34--  https://loremflickr.com/320/240/kitten
+Resolving loremflickr.com (loremflickr.com)... 172.67.170.91, 104.21.47.37, 2606:4700:3034::6815:2f25, ...
+Connecting to loremflickr.com (loremflickr.com)|172.67.170.91|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cache/resized/65535_50539661798_789850e6bd_320_240_nofilter.jpg [following]
+--2021-03-27 14:39:35--  https://loremflickr.com/cache/resized/65535_50539661798_789850e6bd_320_240_nofilter.jpg
+Reusing existing connection to loremflickr.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 11889 (12K) [image/jpeg]
+Saving to: ‘Koleksi_23.jpg’
+
+     0K .......... .                                          100% 2,60M=0,004s
+
+2021-03-27 14:39:35 (2,60 MB/s) - ‘Koleksi_23.jpg’ saved [11889/11889]
+
