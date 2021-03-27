@@ -194,3 +194,145 @@ print ("Wilayah bagian (region) yang memiliki total keuntungan (profit) yang pal
 - Dalam bagian END, kita gunakan **if-else statement** kembali untuk membandingkan mana daerah yang memiliki `jumlah profit` terkecil. Setelah mendapatkannya, kita print sesuai yang diinginkan pada soal dan menggunakan **>>** untuk menyimpan hasil.
 
 ***
+
+# soal-shift-sisop-modul-1-A03-2021
+
+Anggota:
+	Naufal Fajar  I         05111940000007</br>
+        Johnivan Aldo S         05111940000051</br>
+        Abdun Nafi'             05111940000066</br>
+
+# Soal 3
+* ### 3a
+* Membuat script untuk mengunduh 23 gambar dari "https://loremflickr.com/320/240/kitten" serta menyimpan log-nya ke file "Foto.log". Karena gambar yang diunduh acak, ada kemungkinan gambar yang sama terunduh lebih dari sekali, oleh karena itu kalian harus menghapus gambar yang sama (tidak perlu mengunduh gambar lagi untuk menggantinya). Kemudian menyimpan gambar-gambar tersebut dengan nama "Koleksi_XX" dengan nomor yang berurutan tanpa ada nomor yang hilang (contoh : Koleksi_01, Koleksi_02, ...) </br>
+```
+for i in {1..23}
+do
+if [ $i -lt 10 ]
+then
+	wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/kitten
+else
+	wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/kitten
+fi
+done
+```
+Melakukan download 23 gambar dengan menggunakan command wget dari "https://loremflickr.com/320/240/kitten" ditambahkan parameter -a untuk append logfile wget dan -O untuk merename gambar dengan format "Koleksi_0$i.jpg" untuk gambar ke-1 sampai 9 dan selebihnya dengan menggunakan "Koleksi_$i.jpg".
+
+```
+fdupes -d -N ~/Documents/SoalShift1/no3
+```
+Lalu dikarenakan ada kemungkinan gambar yang sama terunduh lebih dari sekali, maka digunakanlah command fdupes dengan parameter -d untuk mendelete duplicate file yang terunduh dan -N untuk menonaktifkan konfirmasi delete dari prompt.
+```
+b=1
+for j in Koleksi_*.jpg
+do
+if [ $b -lt 10 ]
+then
+        mv "$j" Koleksi_0$b.jpg
+else
+        mv "$j" Koleksi_$b.jpg
+fi
+b=$((b+1))
+donetent
+```
+Setelah kita menghapus duplicate files yang ada, tentu saja ada Koleksi foto yang hilang. Untuk merapikan namanya, menggunakan for looping dengan menggunakan command mv.
+
+* ### 3b
+* Karena Kuuhaku malas untuk menjalankan script tersebut secara manual, ia juga meminta kalian untuk menjalankan script tersebut sehari sekali pada jam 8 malam untuk tanggal-tanggal tertentu setiap bulan, yaitu dari tanggal 1 tujuh hari sekali (1,8,...), serta dari tanggal 2 empat hari sekali(2,6,...). Supaya lebih rapi, gambar yang telah diunduh beserta log-nya, dipindahkan ke folder dengan nama tanggal unduhnya dengan format "DD-MM-YYYY" (contoh : "13-03-2023").</br>
+```
+tgl=$(date +"%d-%m-%Y")
+mkdir "$tgl"
+bash soal3a.sh
+mv Koleksi_*.jpg Foto.log $tgl
+```
+Pertama kita buat variabel yang berisikan format tanggal waktu "dd-mm-yyyy" dan buat foldernya dengan menggunakan command mkdir. Lalu unduh gambar melalui script soal3a.sh yang telah dibuat sebelumya dan pindahkan ke folder dengan nama format tanggal yang telah dibuat tadi.
+```
+0 20 1-31/7,2-31/4 * * /home/zenryuu/Documents/SoalShift1/no3/soal3b.sh
+```
+Selanjutnya, agar script tersebut bisa dijalankan sehari sekali pada jam 8 malam di tanggal tertentusetiap bulan yakni dari tanggal 1 tujuh hari sekali dan dari tanggal 2 empat hari sekali, menggunakan crontab. Dengan kolom pada menit 0, lalu pukul 20:00, dari tanggal 1-31 dengan 7 hari sekali dan 2-31 dengan 4 hari sekali.
+
+* ### 3c
+* Agar kuuhaku tidak bosan dengan gambar anak kucing, ia juga memintamu untuk mengunduh gambar kelinci dari "https://loremflickr.com/320/240/bunny". Kuuhaku memintamu mengunduh gambar kucing dan kelinci secara bergantian (yang pertama bebas. contoh : tanggal 30 kucing > tanggal 31 kelinci > tanggal 1 kucing > ... ). Untuk membedakan folder yang berisi gambar kucing dan gambar kelinci, nama folder diberi awalan "Kucing_" atau "Kelinci_" (contoh : "Kucing_13-03-2023"). </br>
+```
+kemaren=$(date -d yesterday +"%d-%m-%Y")
+sekarang=$(date +"%d-%m-%Y")
+```
+Sebagai awalan, kita mencari tanggal kemarin dan sekarang dengan format "dd-mm-yyyy" menggunakan command date dan disimpan ke dalam variabel.
+```
+if [ -d "Kucing_$kemaren" ]
+then
+	for i in {1..23}
+do
+	if [ $i -lt 10 ]
+then
+        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/bunny
+else
+        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/bunny
+fi
+done
+
+fdupes -d -N ~/Documents/SoalShift1/no3
+
+b=1
+for j in Koleksi_*.jpg
+do
+if [ $b -lt 10 ]
+then
+        mv "$j" Koleksi_0$b.jpg
+else
+        mv "$j" Koleksi_$b.jpg
+fi
+b=$((b+1))
+done
+mkdir "Kelinci_$sekarang"
+mv Koleksi_*.jpg Foto.log "Kelinci_$sekarang"
+
+
+else
+
+for i in {1..23}
+do
+if [ $i -lt 10 ]
+then
+        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/kitten
+else
+        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/kitten
+fi
+done
+
+fdupes -d -N ~/Documents/SoalShift1/no3
+
+b=1
+for j in Koleksi_*.jpg
+do
+if [ $b -lt 10 ]
+then
+        mv "$j" Koleksi_0$b.jpg
+else
+        mv "$j" Koleksi_$b.jpg
+fi
+b=$((b+1))
+done
+
+mkdir "Kucing_$sekarang"
+mv Koleksi_*.jpg Foto.log "Kucing_$sekarang"
+
+fi
+```
+Kemudian melakukan pengecekan kondisi if dengan mengecek apakah sudah ada folder "Kucing_$kemaren". Jika sudah ada, maka unduh gambar kelinci jika tidak ada maka akan mengunduh gambar kucing. Setelah melakukan unduhan, hasilnya disimpan pada folder "Kelinci_$sekarang" atau "Kucing_$sekarang".
+
+* ### 3d
+* Untuk mengamankan koleksi Foto dari Steven, Kuuhaku memintamu untuk membuat script yang akan memindahkan seluruh folder ke zip yang diberi nama “Koleksi.zip” dan mengunci zip tersebut dengan password berupa tanggal saat ini dengan format "MMDDYYYY" (contoh : “03032003”).</br>
+```
+pass=$(date +"%d%m%Y")
+zip -P "$pass" -rm Koleksi.zip Kucing_* Kelinci_*
+```
+Membuat pass dengan command date "mmddyyyy" lalu memindahkan seluruh folder "Kucing_*" dan "Kelinci_*" ke Koleksi.zip dengan menggunakan command zip -rm dan -P untuk password yang telah dibuat di variabel pass.
+
+* ### 3e
+* Karena kuuhaku hanya bertemu Steven pada saat kuliah saja, yaitu setiap hari kecuali sabtu dan minggu, dari jam 7 pagi sampai 6 sore, ia memintamu untuk membuat koleksinya ter-zip saat kuliah saja, selain dari waktu yang disebutkan, ia ingin koleksinya ter-unzip dan tidak ada file zip sama sekali.</br>
+```
+0 7 * * 1-5 /home/zenryuu/Documents/SoalShift1/no3/soal3d.sh
+0 18 * * 1-5 unzip -P 'date +"%d%m%Y"' /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip && rm /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip
+```
+Membuat crontab yang digunakan untuk mengunci zip pada Senin-Jum'at dari jam 07:00 sampai 18:00 dan membuka meng-unzip selain waktu itu. Maka cron meng-zip dibuat dengan kolom 0 7 * * 1-5 yang artinya di jam 07:00 setiap hari dalam seminggu dari senin sampai jum'at. Lalu cron unzip nya dibuat dengan kolom 0 18 * * 1-5 yang artinya setiap jam 18:00 setiap hari dalam seminggu dari senin sampai jum'at. Cron meng-zip menjalankan script soal3d.sh yang fungsi nya meng-zip dan cron unzip untuk mengunzip Koleksi.zip pada path tersebut dan meremove zipnya.
