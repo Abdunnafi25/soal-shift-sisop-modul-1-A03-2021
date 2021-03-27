@@ -226,7 +226,7 @@ else
         mv "$j" Koleksi_$b.jpg
 fi
 b=$((b+1))
-donetent
+done
 ```
 Setelah kita menghapus duplicate files yang ada, tentu saja ada Koleksi foto yang hilang. Untuk merapikan namanya, menggunakan for looping dengan menggunakan command mv.
 
