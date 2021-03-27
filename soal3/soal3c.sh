@@ -9,9 +9,9 @@ then
 do
 	if [ $i -lt 10 ]
 then
-        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/kitten
+        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/bunny
 else
-        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/kitten
+        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/bunny
 fi
 done
 
@@ -38,9 +38,9 @@ for i in {1..23}
 do
 if [ $i -lt 10 ]
 then
-        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/bunny
+        wget -a "Foto.log" -O Koleksi_0$i.jpg https://loremflickr.com/320/240/kitten
 else
-        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/bunny
+        wget -a "Foto.log" -O Koleksi_$i.jpg https://loremflickr.com/320/240/kitten
 fi
 done
 
