@@ -1,11 +1,69 @@
 # soal-shift-sisop-modul-1-A03-2021
 
 Anggota : 1. Naufal Fajar  I  05111940000007
+
+
           2. Johnivan Aldo S  05111940000051
+
+
           3. Abdun Nafi'      05111940000066
 
 ***
-## Penjelasan nomor 2
+## Penjelasan nomor 1 ##
+
+### (a) Mengumpulkan informasi dari log aplikasi yang terdapat pada file syslog.log. Informasi yang diperlukan antara lain: jenis log (ERROR/INFO), pesan log, dan username pada setiap baris lognya. Karena Ryujin merasa kesulitan jika harus memeriksa satu per satu baris secara manual, dia menggunakan regex untuk mempermudah pekerjaannya. Bantulah Ryujin membuat regex tersebut.
+
+
+
+Source Kode 1A
+
+```
+check=1
+error=$(grep -c "ERROR" syslog.log)
+info=$(grep -c "INFO" syslog.log)
+
+total=`expr $error + $info`
+hasil=$(cat syslog.log | cut -f6- -d' ')
+
+
+echo "total info log"
+echo $total
+
+echo "Info log, Username, Pesan dan Username"
+if [ $check -lt $total ]
+then 
+  echo "$hasil"
+else
+  echo "Sudah habis"
+fi
+```
+Penjelasan : 
+1. Jadi pertama saya melakukan pencarian terhadap info log yang ada dengan menggunakan variabel ```$error``` dan ```$info``` dan menghitung dengan ```grep -c```
+   setelah ditemukan saya total jumlahnya dan di simpan di variabel ```$total``` 
+
+2. Setelah tersimpan saya membuat kode grep yang hanya menampilkan satu info beserta pesan dan usernamenya dan lalu saya simpan di variabel ```$hasil```
+
+3. Setelah tersimpan , lalu membuat looping if dengan kondisi ``` $check -lt $total``` dan didalam looping melakukan percetakan varibel ```$hasil``` 
+
+### (b) Kemudian, Ryujin harus menampilkan semua pesan error yang muncul beserta jumlah kemunculannya.
+
+Source Code nya :
+```
+# Soal 1b
+#Kemunculan Pesan Error
+echo "Kemunculan Pesan Error dan Jumlahnya"
+echo "Jumlah Pesan Error : $error "
+cat syslog.log | grep "ERROR" | cut -f7- -d' '
+```
+
+### Penjelasan 
+1. Untuk yang pertama saya menampilkan pesan error yang saya buat di soal 1a pada variabel ```$error```
+
+2. untuk langkah kedua yaitu menampilkan pesan error yaitu dengan menggunakan grep ```ERROR``` dan kita pilih yang ingin di tampilkan karna ingin menampilkan pesan error yang beradi di element ke 7 maka menggunakan ``` cut -f7- -d''```
+
+
+***
+## Penjelasan nomor 2 ##
 Steven dan Manis mendirikan sebuah startup bernama “TokoShiSop”. Sedangkan kamu dan Clemong adalah karyawan pertama dari TokoShiSop. Setelah tiga tahun bekerja, Clemong diangkat menjadi manajer penjualan TokoShiSop, sedangkan kamu menjadi kepala gudang yang mengatur keluar masuknya barang.
 
 Tiap tahunnya, TokoShiSop mengadakan Rapat Kerja yang membahas bagaimana hasil penjualan dan strategi kedepannya yang akan diterapkan. Kamu sudah sangat menyiapkan sangat matang untuk raker tahun ini. Tetapi tiba-tiba, Steven, Manis, dan Clemong meminta kamu untuk mencari beberapa kesimpulan dari data penjualan “Laporan-TokoShiSop.tsv”.
@@ -195,7 +253,7 @@ print ("Wilayah bagian (region) yang memiliki total keuntungan (profit) yang pal
 
 ***
 
-# Soal 3
+## Soal 3 ##
 * ### 3a
 * Membuat script untuk mengunduh 23 gambar dari "https://loremflickr.com/320/240/kitten" serta menyimpan log-nya ke file "Foto.log". Karena gambar yang diunduh acak, ada kemungkinan gambar yang sama terunduh lebih dari sekali, oleh karena itu kalian harus menghapus gambar yang sama (tidak perlu mengunduh gambar lagi untuk menggantinya). Kemudian menyimpan gambar-gambar tersebut dengan nama "Koleksi_XX" dengan nomor yang berurutan tanpa ada nomor yang hilang (contoh : Koleksi_01, Koleksi_02, ...) </br>
 ```
