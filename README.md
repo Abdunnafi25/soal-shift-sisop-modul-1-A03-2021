@@ -195,13 +195,6 @@ print ("Wilayah bagian (region) yang memiliki total keuntungan (profit) yang pal
 
 ***
 
-# soal-shift-sisop-modul-1-A03-2021
-
-Anggota:
-	Naufal Fajar  I         05111940000007</br>
-        Johnivan Aldo S         05111940000051</br>
-        Abdun Nafi'             05111940000066</br>
-
 # Soal 3
 * ### 3a
 * Membuat script untuk mengunduh 23 gambar dari "https://loremflickr.com/320/240/kitten" serta menyimpan log-nya ke file "Foto.log". Karena gambar yang diunduh acak, ada kemungkinan gambar yang sama terunduh lebih dari sekali, oleh karena itu kalian harus menghapus gambar yang sama (tidak perlu mengunduh gambar lagi untuk menggantinya). Kemudian menyimpan gambar-gambar tersebut dengan nama "Koleksi_XX" dengan nomor yang berurutan tanpa ada nomor yang hilang (contoh : Koleksi_01, Koleksi_02, ...) </br>
