@@ -7,55 +7,273 @@ Anggota :
 ***
 ## Penjelasan nomor 1 ##
 
-### (a) Mengumpulkan informasi dari log aplikasi yang terdapat pada file syslog.log. Informasi yang diperlukan antara lain: jenis log (ERROR/INFO), pesan log, dan username pada setiap baris lognya. Karena Ryujin merasa kesulitan jika harus memeriksa satu per satu baris secara manual, dia menggunakan regex untuk mempermudah pekerjaannya. Bantulah Ryujin membuat regex tersebut.
+### A. Mengumpulkan informasi dari log aplikasi yang terdapat pada file syslog.log. Informasi yang diperlukan antara lain: jenis log (ERROR/INFO), pesan log, dan username pada setiap baris lognya. Karena Ryujin merasa kesulitan jika harus memeriksa satu per satu baris secara manual, dia menggunakan regex untuk mempermudah pekerjaannya. Bantulah Ryujin membuat regex tersebut.
 
 
 
 Source Kode 1A
 
 ```
-check=1
-error=$(grep -c "ERROR" syslog.log)
-info=$(grep -c "INFO" syslog.log)
+# SOAL 1A
+# Menampilkan Info Log , Pesan dan Username tanpa id
 
-total=`expr $error + $info`
-hasil=$(cat syslog.log | cut -f6- -d' ')
+echo "Info Log, Pesan Log, dan Username"
+cat syslog.log | cut -f6- -d' ' | tr -d '[#0-9]'
 
 
-echo "total info log"
-echo $total
-
-echo "Info log, Username, Pesan dan Username"
-if [ $check -lt $total ]
-then 
-  echo "$hasil"
-else
-  echo "Sudah habis"
-fi
 ```
-Penjelasan : 
-1. Jadi pertama saya melakukan pencarian terhadap info log yang ada dengan menggunakan variabel ```$error``` dan ```$info``` dan menghitung dengan ```grep -c```
-   setelah ditemukan saya total jumlahnya dan di simpan di variabel ```$total``` 
+### Penjelasan 1A
 
-2. Setelah tersimpan saya membuat kode grep yang hanya menampilkan satu info beserta pesan dan usernamenya dan lalu saya simpan di variabel ```$hasil```
+Cara menampilkan Info Log, Pesan dan Username pada file syslog.log yaitu dengan melakukan stream stdin dan stdout atau dengan menggunakan pipe ```|``` 
+1. pertama kita merujukkepada filenya lalu kita stdout pada command ```cut -f6- -d' '``` yang artinya mengambil field ke sampai 
+   belakang dengan delimiter tanda spasi ```-d' '```
+2. Lalu hasil dari perintah cut kita hapus id seperti ```[#2453]``` yang ada pada hasil cut dengan menggunakan ```tr -d '[#0-9]'``` yang mana ```-d``` merupakan perintah
+   delete sesuai yang kita inginkan.
 
-3. Setelah tersimpan , lalu membuat looping if dengan kondisi ``` $check -lt $total``` dan didalam looping melakukan percetakan varibel ```$hasil``` 
-
-### (b) Kemudian, Ryujin harus menampilkan semua pesan error yang muncul beserta jumlah kemunculannya.
+### B. Kemudian, Ryujin harus menampilkan semua pesan error yang muncul beserta jumlah kemunculannya.
 
 Source Code nya :
 ```
 # Soal 1b
 #Kemunculan Pesan Error
+
 echo "Kemunculan Pesan Error dan Jumlahnya"
-echo "Jumlah Pesan Error : $error "
-cat syslog.log | grep "ERROR" | cut -f7- -d' '
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f1 -d'(' | sort | uniq -c
+
 ```
 
-### Penjelasan 
-1. Untuk yang pertama saya menampilkan pesan error yang saya buat di soal 1a pada variabel ```$error```
+### Penjelasan 1B
+Untuk cara menampilkan kemunculan pesan Error dan jumlahnya yaitu sama dengan yang atas menggunakan pipe
+1. Pertama kita cat file ```syslog.log``` lalu  kita grep dengan kata ```ERROR''' agar hanya log ERROR saja yang di cari
+2. setelah dapat lalu cut dan tampilkan hanya field ke 7 sampai ke belakang dengan code ```cut -f7- -d' '``` 
+3. setelah dapat field 7 sampai belakang, pipe lagi dan cari field 1 yang delimiter nya tanda ```(``` dengan menggunakan code berikut ```cut -f1 -d'('``` fungsinya untuk 
+   mendapatkan pesannya saja sehingga username tidak ikut tercetak.
+4. setelah mendapatkan pesan kita sorting pesan nya dengan code ```sort``` lalu agar tidak ada yang sama pesannya dan terhitung berdasarkan pesan yang sama kita pipe dengan    menggunakan code ```uniq -c``` 
 
-2. untuk langkah kedua yaitu menampilkan pesan error yaitu dengan menggunakan grep ```ERROR``` dan kita pilih yang ingin di tampilkan karna ingin menampilkan pesan error yang beradi di element ke 7 maka menggunakan ``` cut -f7- -d''```
+### C. Menampilkan jumlah kemunculan ERROR dan INFO dari setiap User
+
+Source Code nya :
+```
+#soal  1c
+#Menampilkan jumlah kemunculan log error dan info untuk setiap usernya 
+echo " Kemunculan error pada setiap user"
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c
+
+echo "Kemunculan Info pada setiap user "
+cat syslog.log | grep "INFO" | cut -f7- -d' ' | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c
+
+```
+
+### Penjelasan 1C
+Menampilkan jumlah kemunculan error dan info dari setiap user dengan menggunakan pipe sebagai berikut
+```cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c``` 
+1. ```cat syslog.log``` untuk menconcate file syslog.log
+2. ``` grep "ERROR"``` untuk menampilkan log yang hanya mengandung kata ERROR
+3. ```  cut -f7- -d' ' ``` untuk menampilkan field ke 7 sampapai belakang (mengandung pesan, dan username)
+4. ```  cut -f2 -d'(' | cut -f1 -d')' ``` untuk menampilkan username 
+5. ``` | sort | uniq -c ``` Melakukan sorting berdasarkan username lalu menampilkan satu username yang sama dan menghitungnya berdasarkan username.
+
+### D. Semua informasi yang didapatkan pada poin b dituliskan ke dalam file error_message.csv dengan header Error,Count
+
+Source Code nya :
+```
+#Soal 1d 
+# menuliskan hasil dari 1b kepada file error_message.csv dengan header Error, Count
+# dan diikuti oleh pesan error dan jumlahnya.
+
+printf 'Error,Count\n' > error_message.csv
+
+# Menghitung Pesan Error yang ada di File syslog.log
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f1  -d'(' | sort | uniq -c | sort -nr | grep -Eo '[0-9]{1,}' > count.csv
+
+# Mencari grep pesan error dan menghitungnya tetapi file hasil hitung di hapus
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f1 -d'(' | sort | uniq -c | sort -nr | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > message.csv
+
+# Memindahkan file message.csv dan count.csv ke file  error_message.csv
+paste message.csv count.csv | while IFS="$(printf '\t')"
+read -r f1 f2
+do
+ printf "$f1,$f2\n"
+done >> error_message.csv
+
+rm message.csv
+rm count.csv
+
+```
+
+### Penjelasan 1D
+
+Memindahkan data yang di dapat pada soal 1b kepada file ```error_message.csv``` dengan cara berikut
+1. Pertama membuat file ```error_message.csv``` dengan header ```Error, Count```
+2. lalu kita hitung pesan error yang terdapat di file syslog.log dengan code berikut ```cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f1  -d'(' | sort | uniq -c | sort -nr | grep -Eo '[0-9]{1,}' > count.csv```  dengan tambahan  code ```grep -Eo '[0-9]{1,}``` untuk menampilkan angka errornya saja. lalu dipindahkan kepada file ```count.csv```
+sebagai temp menyimpan hasil regex yang kita buat.
+4. selanjutnya kita membuat regex untuk menampilkan pesannya saja tanpa jumlah berdasarkan pesan error dengan code berikut
+   ```cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f1 -d'(' | sort | uniq -c | sort -nr | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > message.csv```
+   pada code tersebut terdapat ```sort -nr``` untuk mengurutkan hasil jumlah pesan error dari yang terbesar. Dan untuk code ```tr -d '[0-9]'``` menghapus angkanya
+   agar tidak ditampilkan di dalam regex dan hanya pesan nya saja yang di tampilkan. untuk code ``` sed -e 's/^[[:space:]]*//' ``` untuk mereplace yang mengandung whitespce 
+   menjadi tidak ada whitespace. Lalu hasil dari regex dikirim ke file ```message.csv```
+5. setelah mendapatkan file ```count.csv``` dan ```message.csv``` selanjutnya memindahkan data ke file ```error_message.csv``` dengan menggunakan perulangan sebagai berikut:
+   
+   ```
+   paste message.csv count.csv | while IFS="$(printf '\t')"
+   read -r f1 f2
+   do
+   printf "$f1,$f2\n"
+   done >> error_message.csv
+
+   ```
+   kode ```paste``` digunakan untuk menyalin file ketika memenuhi kode ```IFS="$(printf '\t')``` yang berarti pemisahan dilakukan dengan tab
+   kode ```read -r f1 f2``` membaca file secara reverse dengan message.csv sebagai field 1 dan count sebagai field 2
+   jika memenuhi maka data akan di salin ke pada file ```error_message.csv```
+   
+ 6. Menghapus file ```count.csv``` dan ``` message.csv``` dengan code 
+    ```
+    rm message.csv
+    rm count.csv
+
+    ```
+   
+   
+### E. Semua informasi yang didapatkan pada poin c dituliskan ke dalam file user_statistic.csv dengan header Username,INFO,ERROR 
+diurutkan berdasarkan username secara ascending
+
+Source Code nya :
+```
+#Soal 1e 
+# Menuliskan poin yang di dapat dari 1c ke dalam file user_statistic.csv dengan header Username , INFO < ERROR
+# diurutkan berdasarkan username ascending
+
+printf 'Username,INFO,ERROR\n' > user_statistic.csv
+
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | grep -Eo '[0-9]{1,}' > errorcount.csv
+
+cat syslog.log | grep "INFO" | cut -f7- -d' ' | cut -f2 -d '(' | cut -f1 -d')' | sort | uniq -c | grep -Eo '[0-9]{1,}' > infocount.csv
+
+cat syslog.log | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > user.csv
+
+cat syslog.log | grep "ERROR" | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > errorname.csv
+
+cat syslog.log | grep "INFO" | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > infoname.csv
+
+
+#Perulangan untuk memindahkan data
+
+while read username;
+do
+   nama_user="$username"
+   info_user=0
+   error_user=0
+
+   paste infocount.csv infoname.csv | (while read  info_count info_name;
+                                     do 
+                                       if [ "$nama_user" == "$info_name" ]
+                                       then
+                                           info_user=$info_count
+                                           break
+                                       fi
+                                     done
+  paste errorcount.csv errorname.csv | (while read error_count error_name;
+                                          do
+                                             if [ "$nama_user" == "$error_name" ]
+                                             then
+                                                 error_user=$error_count
+                                                 break
+                                             fi
+                                          done
+                                          printf "$nama_user,$info_user,$error_user\n" >> user_statistic.csv))
+done < user.csv
+
+rm user.csv
+rm errorcount.csv
+rm infocount.csv
+rm errorname.csv
+rm infoname.csv
+
+
+```
+
+### Penjelasan 1E
+
+Sama halnya dengan no 1D , 1E memindahkan semua informasi yang didapatkan di 1C di pindah kedalam file ```user_statistic.csv```
+1. Membuat file ```user_statistic``` yang memiliki header ```USER,INFO,ERROR``` dengan code berikut ```printf 'Username,INFO,ERROR\n' > user_statistic.csv```
+2. Setelah membuat file ```user_statistic``` selanjutnya membuat regex untuk mengambil data sesuai yang kita ingingkan dengan code sebagai berikut 
+```
+cat syslog.log | grep "ERROR" | cut -f7- -d' ' | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | grep -Eo '[0-9]{1,}' > errorcount.csv
+
+cat syslog.log | grep "INFO" | cut -f7- -d' ' | cut -f2 -d '(' | cut -f1 -d')' | sort | uniq -c | grep -Eo '[0-9]{1,}' > infocount.csv
+
+cat syslog.log | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > user.csv
+
+cat syslog.log | grep "ERROR" | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > errorname.csv
+
+cat syslog.log | grep "INFO" | cut -f2 -d'(' | cut -f1 -d')' | sort | uniq -c | tr -d '[0-9]' | sed -e 's/^[[:space:]]*//' > infoname.csv
+```
+
+file ```errorcount.csv``` untuk menghuitung jumlah error yang didapatkan berdasarkan username
+file ```infocount.csv```  untuk menghitung jumlah info yang didapatkan berdasarkan username
+file ```user.csv``` untuk menampilkan dan menyimpan username 
+file ```errorname.csv``` untuk menampilkan nama yang mendapatkan log ERROR
+file ```infoname.csv``` untuk menampilkan nama yang mendapatkan log INFO
+
+3. Setelah selesai kita pindahkan semua file ke ```user_statistic.csv``` dengan melakukan perulangan sebagai berikut:
+```
+while read username;
+do
+   nama_user="$username"
+   info_user=0
+   error_user=0
+```
+code diatas melakukan perulangan dengan argumen username 
+```
+
+   paste infocount.csv infoname.csv | (while read  info_count info_name;
+                                     do 
+                                       if [ "$nama_user" == "$info_name" ]
+                                       then
+                                           info_user=$info_count
+                                           break
+                                       fi
+                                     done
+  paste errorcount.csv errorname.csv | (while read error_count error_name;
+                                          do
+                                             if [ "$nama_user" == "$error_name" ]
+                                             then
+                                                 error_user=$error_count
+                                                 break
+                                             fi
+                                          done
+                                          printf "$nama_user,$info_user,$error_user\n" >> user_statistic.csv))
+done < user.csv
+```
+Selanjutnya code diatas melakukan pengencekan setiap data yang ingin dimasukkan ke dalam file ```user_statistic.csv``` misal ketika menyalin file ```infocount.csv``` dengan file ```infoname.csv``` akan di lakukan pengecekan apakah argumen username dari file ```user.csv``` cocok dengan kedua file tersebut dengan code berikut 
+```
+ if [ "$nama_user" == "$info_name" ]
+                                       then
+                                           info_user=$info_count
+                                           break
+                                       fi
+``` 
+
+jika cocok maka hasil dari ```infocount.csv``` akan dimasukkan ke dalam variabel ```info_user``` yang akan di tampilkan kedalam file ```user_statistic.csv```
+setelah melakukan mengecekanna jumlah info yang diperoleh per user maka akan dilakukan pengecekan jumlah error dengan kode berikut dan akan disalin ke data ```user_statistic.csv```
+```
+if [ "$nama_user" == "$error_name" ]
+                                             then
+                                                 error_user=$error_count
+                                                 break
+                                             fi
+```
+
+Setelah selesai semua maka kita hapus 5 file yang kita buat untuk temp dengan code berikut :
+```
+rm user.csv
+rm errorcount.csv
+rm infocount.csv
+rm errorname.csv
+rm infoname.csv
+
+```
+
 
 
 ***
