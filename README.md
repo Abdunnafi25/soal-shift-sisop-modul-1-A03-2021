@@ -31,6 +31,10 @@ Cara menampilkan Info Log, Pesan dan Username pada file syslog.log yaitu dengan 
 2. Lalu hasil dari perintah cut kita hapus id seperti ```[#2453]``` yang ada pada hasil cut dengan menggunakan ```tr -d '[#0-9]'``` yang mana ```-d``` merupakan perintah
    delete sesuai yang kita inginkan.
 
+Berikut Hasil Ouput untuk soal 1A
+![image_2021-04-03_00-05-36](https://user-images.githubusercontent.com/68435705/113477419-c3c94c80-94ab-11eb-8b7e-7a09d9946dae.png)
+
+
 ### B. Kemudian, Ryujin harus menampilkan semua pesan error yang muncul beserta jumlah kemunculannya.
 
 Source Code nya :
