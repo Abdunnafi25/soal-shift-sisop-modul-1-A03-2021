@@ -31,7 +31,9 @@ Cara menampilkan Info Log, Pesan dan Username pada file syslog.log yaitu dengan 
 2. Lalu hasil dari perintah cut kita hapus id seperti ```[#2453]``` yang ada pada hasil cut dengan menggunakan ```tr -d '[#0-9]'``` yang mana ```-d``` merupakan perintah
    delete sesuai yang kita inginkan.
 
-Berikut Hasil Ouput untuk soal 1A
+#### Berikut Hasil Ouput untuk soal 1A
+
+
 ![image_2021-04-03_00-05-36](https://user-images.githubusercontent.com/68435705/113477419-c3c94c80-94ab-11eb-8b7e-7a09d9946dae.png)
 
 
@@ -55,6 +57,12 @@ Untuk cara menampilkan kemunculan pesan Error dan jumlahnya yaitu sama dengan ya
    mendapatkan pesannya saja sehingga username tidak ikut tercetak.
 4. setelah mendapatkan pesan kita sorting pesan nya dengan code ```sort``` lalu agar tidak ada yang sama pesannya dan terhitung berdasarkan pesan yang sama kita pipe dengan    menggunakan code ```uniq -c``` 
 
+
+#### Berikut Hasil Ouput untuk soal 1B
+
+
+![image_2021-04-03_00-06-06](https://user-images.githubusercontent.com/68435705/113477473-17d43100-94ac-11eb-8d6c-c5d7c8c44980.png)
+
 ### C. Menampilkan jumlah kemunculan ERROR dan INFO dari setiap User
 
 Source Code nya :
@@ -77,6 +85,13 @@ Menampilkan jumlah kemunculan error dan info dari setiap user dengan menggunakan
 3. ```  cut -f7- -d' ' ``` untuk menampilkan field ke 7 sampapai belakang (mengandung pesan, dan username)
 4. ```  cut -f2 -d'(' | cut -f1 -d')' ``` untuk menampilkan username 
 5. ``` | sort | uniq -c ``` Melakukan sorting berdasarkan username lalu menampilkan satu username yang sama dan menghitungnya berdasarkan username.
+
+
+#### Berikut Hasil Ouput untuk soal 1C
+
+
+![image_2021-04-03_00-06-26](https://user-images.githubusercontent.com/68435705/113477480-2589b680-94ac-11eb-9204-e876cf542831.png)
+
 
 ### D. Semua informasi yang didapatkan pada poin b dituliskan ke dalam file error_message.csv dengan header Error,Count
 
@@ -137,7 +152,13 @@ sebagai temp menyimpan hasil regex yang kita buat.
     rm count.csv
 
     ```
-   
+    
+ #### Berikut Hasil Ouput untuk soal 1D
+
+
+![image_2021-04-03_00-20-47](https://user-images.githubusercontent.com/68435705/113477494-4520df00-94ac-11eb-9b11-08dba0da6c5a.png)
+
+
    
 ### E. Semua informasi yang didapatkan pada poin c dituliskan ke dalam file user_statistic.csv dengan header Username,INFO,ERROR 
 diurutkan berdasarkan username secara ascending
@@ -279,6 +300,11 @@ rm infoname.csv
 
 ```
 
+    
+ #### Berikut Hasil Ouput untuk soal 1E
+
+
+![image_2021-04-03_00-01-51](https://user-images.githubusercontent.com/68435705/113477501-4ce08380-94ac-11eb-9662-53f9e6fe52ce.png)
 
 
 ***
