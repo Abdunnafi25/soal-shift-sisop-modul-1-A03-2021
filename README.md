@@ -548,7 +548,9 @@ Pertama kita buat variabel yang berisikan format tanggal waktu "dd-mm-yyyy" dan 
 ```
 0 20 1-31/7,2-31/4 * * /home/zenryuu/Documents/SoalShift1/no3/soal3b.sh
 ```
-Selanjutnya, agar script tersebut bisa dijalankan sehari sekali pada jam 8 malam di tanggal tertentusetiap bulan yakni dari tanggal 1 tujuh hari sekali dan dari tanggal 2 empat hari sekali, menggunakan crontab. Dengan kolom pada menit 0, lalu pukul 20:00, dari tanggal 1-31 dengan 7 hari sekali dan 2-31 dengan 4 hari sekali.
+Selanjutnya, agar script tersebut bisa dijalankan sehari sekali pada jam 8 malam di tanggal tertentusetiap bulan yakni dari tanggal 1 tujuh hari sekali dan dari tanggal 2 empat hari sekali, menggunakan crontab. Dengan kolom pada menit 0, lalu pukul 20:00, dari tanggal 1-31 dengan 7 hari sekali dan 2-31 dengan 4 hari sekali.<br>
+![output3](https://user-images.githubusercontent.com/81413071/113496846-f87ae980-9527-11eb-86c7-37e14bdab83e.PNG)
+
 
 * ### 3c
 * Agar kuuhaku tidak bosan dengan gambar anak kucing, ia juga memintamu untuk mengunduh gambar kelinci dari "https://loremflickr.com/320/240/bunny". Kuuhaku memintamu mengunduh gambar kucing dan kelinci secara bergantian (yang pertama bebas. contoh : tanggal 30 kucing > tanggal 31 kelinci > tanggal 1 kucing > ... ). Untuk membedakan folder yang berisi gambar kucing dan gambar kelinci, nama folder diberi awalan "Kucing_" atau "Kelinci_" (contoh : "Kucing_13-03-2023"). </br>
