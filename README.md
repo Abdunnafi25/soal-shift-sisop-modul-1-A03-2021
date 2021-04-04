@@ -531,7 +531,8 @@ fi
 b=$((b+1))
 done
 ```
-Setelah kita menghapus duplicate files yang ada, tentu saja ada Koleksi foto yang hilang. Untuk merapikan namanya, menggunakan for looping dengan menggunakan command mv.
+Setelah kita menghapus duplicate files yang ada, tentu saja ada Koleksi foto yang hilang. Untuk merapikan namanya, menggunakan for looping dengan menggunakan command mv.<br>
+![output](https://user-images.githubusercontent.com/81413071/113496567-0ed37600-9525-11eb-884d-08e924a80a21.PNG)
 
 * ### 3b
 * Karena Kuuhaku malas untuk menjalankan script tersebut secara manual, ia juga meminta kalian untuk menjalankan script tersebut sehari sekali pada jam 8 malam untuk tanggal-tanggal tertentu setiap bulan, yaitu dari tanggal 1 tujuh hari sekali (1,8,...), serta dari tanggal 2 empat hari sekali(2,6,...). Supaya lebih rapi, gambar yang telah diunduh beserta log-nya, dipindahkan ke folder dengan nama tanggal unduhnya dengan format "DD-MM-YYYY" (contoh : "13-03-2023").</br>
