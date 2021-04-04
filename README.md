@@ -380,6 +380,9 @@ if(pprofit >= max){
 - Hasil kemudian disimpan di dalam file hasil.txt
 `Laporan-TokoShisop.tsv` adalah input-file yang terbaca oleh AWK, namun pastikan dia berada dalam 1 folder. Kemudian tanda **>** untuk membuat dan menaruh hasil di file yang baru yang bernama `hasil.txt`  
 
+**Kendala :**
+- Tidak ada
+
 ### 2b. Mencari nama customer yang membeli di tahun 2017 dan di kota Albuquerque
 
 ```
@@ -415,6 +418,9 @@ Menggunakan if condition untuk mengecek apakah kustomer melakukan transaksi tahu
 - Setelah syaratnya terpenuhi, maka kita mendapatkan `nama kustomer` yang akan disimpan dalam sebuah array `nama[$7]++` dimana **$7** adalah `Customer Name` dan digunakan operator **++** agar isi array dapat bertambah 1 apabila setiap ada yang memenuhi. 
 
 - Pada blok end, melakukan looping yang terdapat di dalam array dan mengeluarkan sebagai output. Dengan cara ini, setiap nama yang muncul hanya 1 kali dan tidak lebih, jangan lupa kita sekarang gunakan tanda **>>** agar hasil yang kita outputkan tidak terhapus dan ditambahkan di akhir, karena apabila kita gunakan **>** maka akan ditimpa
+
+**Kendala :**
+- Awalnya bingung bagaimana mencari tahun 2017, namun ternyata setelah mencari dari berbagai sumber, dapat menggunakan **~**
 
 ### 2c. Mencari Segmen Customer dan Jumlah Transaksi yang Paling Sedikit
 ```
@@ -460,6 +466,9 @@ print("\nTipe segmen customer yang penjualannya paling sedikit adalah "segment"\
 - Masing-masing kita gunakan **if-else** condition untuk menghitung jumlah transaksi pada masing-masing segment. Kita gunakan counter pada masing, masing segment, yaitu _homeoffice_ untuk segment **Home Office**, _consumer_ untuk **Consumer**, dan _corporate_ untuk **Corporate**. Counter akan bertambah bila memenuhi syarat 
 
 - Dalam menampilkan `Tipe Segment` dan `Jumlah Transaksi Segment`, kita gunakan **if-else** condition lagi. Kita bandingkan terhadap masing-masing segmen, dan terdapat 3 kondisi, yaitu apabila _homeffice_ atau _consumer_ atau _corporate_ yang terkecil
+
+**Kendala :**
+- Tidak ada
 
 ### 2d. Mencari Region yang Memiliki Profit Tersedikit dan Total Keuntungannya
 ```
@@ -510,6 +519,13 @@ print ("Wilayah bagian (region) yang memiliki total keuntungan (profit) yang pal
 - Cara menjawab yang digunakan hampir mirip seperti pada nomor **2c** namun disini yang digunakan adalah _region_ yang terdapat pada $13 dan _profit_ yang terdapat pada $21. Kita gunakan **if-else statement** kembali dan mencari jumlah total keuntungan dari tiap region.
 
 - Dalam bagian END, kita gunakan **if-else statement** kembali untuk membandingkan mana daerah yang memiliki `jumlah profit` terkecil. Setelah mendapatkannya, kita print sesuai yang diinginkan pada soal dan menggunakan **>>** untuk menyimpan hasil.
+
+**Kendala :**
+- Tidak ada
+
+**Screenshot hasil :**
+-
+<img width="576" alt="hasil txt" src="https://user-images.githubusercontent.com/36225278/113510172-b67f9100-9583-11eb-854c-03e5a97ee4bc.png">
 
 ***
 
