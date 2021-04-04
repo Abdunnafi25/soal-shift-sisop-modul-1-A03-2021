@@ -652,6 +652,8 @@ mv Koleksi_*.jpg Foto.log "Kucing_$sekarang"
 fi
 ```
 Kemudian melakukan pengecekan kondisi if dengan mengecek apakah sudah ada folder "Kucing_$kemaren". Jika sudah ada, maka unduh gambar kelinci jika tidak ada maka akan mengunduh gambar kucing. Setelah melakukan unduhan, hasilnya disimpan pada folder "Kelinci_$sekarang" atau "Kucing_$sekarang".
+![output4](https://user-images.githubusercontent.com/81413071/113496848-f9138000-9527-11eb-8e1e-ed5b9c7896de.PNG)
+
 
 * ### 3d
 * Untuk mengamankan koleksi Foto dari Steven, Kuuhaku memintamu untuk membuat script yang akan memindahkan seluruh folder ke zip yang diberi nama “Koleksi.zip” dan mengunci zip tersebut dengan password berupa tanggal saat ini dengan format "MMDDYYYY" (contoh : “03032003”).</br>
@@ -668,3 +670,7 @@ Membuat pass dengan command date "mmddyyyy" lalu memindahkan seluruh folder "Kuc
 0 18 * * 1-5 unzip -P 'date +"%d%m%Y"' /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip && rm /home/zenryuu/Documents/SoalShift1/no3/Koleksi.zip
 ```
 Membuat crontab yang digunakan untuk mengunci zip pada Senin-Jum'at dari jam 07:00 sampai 18:00 dan membuka meng-unzip selain waktu itu. Maka cron meng-zip dibuat dengan kolom 0 7 * * 1-5 yang artinya di jam 07:00 setiap hari dalam seminggu dari senin sampai jum'at. Lalu cron unzip nya dibuat dengan kolom 0 18 * * 1-5 yang artinya setiap jam 18:00 setiap hari dalam seminggu dari senin sampai jum'at. Cron meng-zip menjalankan script soal3d.sh yang fungsi nya meng-zip dan cron unzip untuk mengunzip Koleksi.zip pada path tersebut dan meremove zipnya.
+### Kendala
+- Sempat kesulitan mencari duplikat file<br>
+- Masih bingung tentang crontab<br>
+- Tidak hafal parameter dan regex<br>
