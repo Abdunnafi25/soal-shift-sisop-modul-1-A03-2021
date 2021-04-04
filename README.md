@@ -651,8 +651,13 @@ mv Koleksi_*.jpg Foto.log "Kucing_$sekarang"
 
 fi
 ```
-Kemudian melakukan pengecekan kondisi if dengan mengecek apakah sudah ada folder "Kucing_$kemaren". Jika sudah ada, maka unduh gambar kelinci jika tidak ada maka akan mengunduh gambar kucing. Setelah melakukan unduhan, hasilnya disimpan pada folder "Kelinci_$sekarang" atau "Kucing_$sekarang".
+Kemudian melakukan pengecekan kondisi if dengan mengecek apakah sudah ada folder "Kucing_$kemaren". Jika sudah ada, maka unduh gambar kelinci jika tidak ada maka akan mengunduh gambar kucing. Setelah melakukan unduhan, hasilnya disimpan pada folder "Kelinci_$sekarang" atau "Kucing_$sekarang".<br>
 ![output4](https://user-images.githubusercontent.com/81413071/113496848-f9138000-9527-11eb-8e1e-ed5b9c7896de.PNG)
+![output5](https://user-images.githubusercontent.com/81413071/113496850-f9138000-9527-11eb-9b43-6e06d84b1696.PNG)
+![output6](https://user-images.githubusercontent.com/81413071/113496851-f9ac1680-9527-11eb-9ea8-2430b1fb52c1.PNG)
+![output7](https://user-images.githubusercontent.com/81413071/113496853-fa44ad00-9527-11eb-86e8-5a3219921653.PNG)
+![output8](https://user-images.githubusercontent.com/81413071/113496854-fadd4380-9527-11eb-8dd8-339a0285a58b.PNG)
+
 
 
 * ### 3d
