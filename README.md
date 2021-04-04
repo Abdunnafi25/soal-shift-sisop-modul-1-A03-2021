@@ -307,6 +307,21 @@ rm infoname.csv
 ![image_2021-04-03_00-01-51](https://user-images.githubusercontent.com/68435705/113477501-4ce08380-94ac-11eb-9662-53f9e6fe52ce.png)
 
 
+
+
+#### Kendala Pengerjaan no 1
+
+Terjadi Looping saat menampilkan INFO/ERROR, Pesan dan Username dengan kodingan seperti berikut :
+
+![photo_2021-04-04_10-38-50](https://user-images.githubusercontent.com/68435705/113497875-1b120000-9532-11eb-8131-546e5b791fe2.jpg)
+
+
+Kendala Looping yang dimaksud sebagai berikut :
+
+![photo_2021-04-04_10-38-57](https://user-images.githubusercontent.com/68435705/113497876-1cdbc380-9532-11eb-8de9-9b1fb871c134.jpg)
+
+
+
 ***
 ## Penjelasan nomor 2 ##
 Steven dan Manis mendirikan sebuah startup bernama “TokoShiSop”. Sedangkan kamu dan Clemong adalah karyawan pertama dari TokoShiSop. Setelah tiga tahun bekerja, Clemong diangkat menjadi manajer penjualan TokoShiSop, sedangkan kamu menjadi kepala gudang yang mengatur keluar masuknya barang.
